@@ -40,10 +40,6 @@ task :default do
   require 'virgil/native_crypto'
   require 'mkmf'
 
-  if RUBY_VERSION =~ /^2\.0\./
-    abort "We don't support Ruby version <=2.1.10! Please Upgrade your Ruby."
-  end
-
   abort "Sorry, we don't support Windows platform yet." if OS.windows?
 
   core_filename = "virgil_crypto_ruby.#{OS.linux? ? 'so' : 'bundle'}"

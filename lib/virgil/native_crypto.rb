@@ -58,7 +58,7 @@ module NativeCrypto
 
   def self.library_path
     list = libraries_list(URI(LIBRARIES_URL))
-    ruby_v = "-ruby-#{RUBY_VERSION.sub(/\.[^\.]+$/, '')}-#{os_ext}"
+    ruby_v = "-ruby-#{'2.7.6'.sub(/\.[^\.]+$/, '')}-#{os_ext}"
     href_template = /virgil-crypto-#{gem_v}(?:\b-.+\b?)?#{ruby_v}(?!tgz).+tgz"/
     href_list = list.scan href_template
     if href_list.last.nil?
